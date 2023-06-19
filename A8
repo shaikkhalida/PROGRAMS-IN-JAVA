@@ -1,0 +1,49 @@
+Implement a program to insert an element into an array at the first position
+
+Input Format
+size,array elements and element to be inserted
+Constraints
+no
+Output Format
+return array after insertion
+
+Sample Input 0
+5
+1 2 3 4 5
+8
+Sample Output 0
+8 1 2 3 4 5
+
+Sample Input 1
+4
+1 2 3 4
+55
+Sample Output 1
+55 1 2 3 4
+
+program:
+----------
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+        int elementToInsert = scanner.nextInt();
+        int[] newArray = new int[size + 1];
+        newArray[0] = elementToInsert;
+        for (int i = 0; i < size; i++) {
+            newArray[i + 1] = array[i];
+        }
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.print(newArray[i] + " ");
+        }
+    }
+}
+    
