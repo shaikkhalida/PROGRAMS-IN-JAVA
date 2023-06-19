@@ -1,0 +1,53 @@
+Implement a program to update an element in the given array
+
+Input Format
+size,array elements and element to be updated (old element & new element)
+Constraints
+no
+Output Format
+return array after updating
+
+Sample Input 0
+5
+1 2 3 4 5
+2
+999
+Sample Output 0
+1 999 3 4 5
+
+Sample Input 1
+5
+1 2 3 4 5
+1
+888
+Sample Output 1
+888 2 3 4 5
+
+
+program:
+----------
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+        int oldElement = scanner.nextInt();
+        int newElement = scanner.nextInt();
+        for (int i = 0; i < size; i++) {
+            if (array[i] == oldElement) {
+                array[i] = newElement;
+                break;
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+}
