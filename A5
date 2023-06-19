@@ -1,0 +1,46 @@
+Implement a program to find min element present in an array.
+
+Input Format
+size and array elements
+Constraints
+no
+Output Format
+min element in array
+
+Sample Input 0
+5
+1 5 2 3 4
+Sample Output 0
+1
+
+Sample Input 1
+6
+1 2 3 6 5 4
+Sample Output 1
+1
+
+
+program:
+-----------
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+      int size = sc.nextInt();
+      int numbers[] = new int[size];
+      //input
+      for(int i=0; i<size; i++) {
+          numbers[i] = sc.nextInt();
+      }
+      int min = Integer.MAX_VALUE;
+     
+       for(int i=0; i<numbers.length; i++) {
+           if(numbers[i] < min) {
+               min = numbers[i];
+           }  
+       }
+       System.out.println(min); 
+   }
+}
